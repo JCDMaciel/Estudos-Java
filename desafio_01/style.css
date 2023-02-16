@@ -1,0 +1,82 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container-formulario {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 1rem;
+}
+
+.container-formulario-item {
+    width: 70vw;
+    margin: 0.1rem 0;
+}
+
+.container-formulario-aniversario {
+    width: 38vw;
+}
+
+.container-aniversario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tabela {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabela-item {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 0.1rem 0.5rem;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.1rem;
+}
+
+@media screen and (min-width: 1028px) {
+    .titulo {
+        display: flex;
+        justify-content: center;
+        font-size: 3rem;
+        margin: 1rem;
+    }
+
+    .container-formulario-item {
+        width: 30vw;
+        margin: 0.2rem 0;
+    }
+
+    .container-formulario-aniversario {
+        width: 22vw;
+    }
+
+    .tabela-item {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem 1.5rem;
+        border-style: solid;
+        border-color: white;
+        border-width: 0.1rem;
+    }
+}

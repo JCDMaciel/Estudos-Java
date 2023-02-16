@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="titulo">Formulário de cadastro</h1>
+    <section class="container">
+        <div >
+            <form class="container-formulario">
+                <input type="text" placeholder="Nome" id="nome" class="container-formulario-item">
+                <input type="number" placeholder="CPF (somente numeros)" id="cpf" class="container-formulario-item">
+                <input type="email" placeholder="E-mail" id="email" class="container-formulario-item">
+                <input type="text" placeholder="Endedeço" id="endereco" class="container-formulario-item">
+                <div class="container-aniversario">
+                    <p class="container-titulo-aniversario">Data de nascimento</p><input type="date" id="nascimento" class="container-formulario-item container-formulario-aniversario">
+                </div>
+                <input type="tel" placeholder="xx-xxxxx-xxxx" id="primeiro_contato" class="container-formulario-item">
+                <input type="tel" placeholder="xx-xxxxx-xxxx" id="segundo_contato" class="container-formulario-item">
+                <input type="submit" value="Cadastrar" id="cadastrar" class="container-formulario-item">
+            </form>
+        </div>
+    </section>
+    <h2 class="titulo">Tabela de cadastros</h2>
+    <table class="tabela">
+        <tbody id="tabela">
+            <tr>
+                <td class="tabela-item">Nome</td>
+                <td class="tabela-item">CPF</td>
+                <td class="tabela-item">Email</td>
+                <td class="tabela-item">Endereço</td>
+                <td class="tabela-item">Nascimento</td>
+                <td class="tabela-item">Ações</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
