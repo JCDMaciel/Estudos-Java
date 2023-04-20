@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/routes/config.js"></script>
+    <script src="assets/js/services/pessoasAPIservice.js"></script>
+    <script src="assets/js/controllers/listController.js"></script>
+    <script src="assets/js/controllers/viewController.js"></script>
+    <script src="assets/js/controllers/cadastroController.js"></script>
+    <script src="assets/js/directives/uiFormularioCadastroContatoDirective.js"></script>
+    <script src="assets/js/directives/uiFormularioCadastroUsuarioDirective.js"></script>
+    <script src="assets/js/directives/uiAlertDirective.js"></script>
+    </head>
+<body ng-app="app">
+    <div style="display: flex; justify-content: space-between; flex-direction: row; background-color: rgb(180, 180, 180);">
+        <h1 style="font-weight: 600; margin-top: 1rem; margin-left: 1rem;"><a ui-sref="index" style="text-decoration: none; color: rgb(37, 37, 37);">Menu</a></h1>
+        <div style="margin-top: 0.5rem;">
+            <button type="submit" class="btn btn-link"><a ui-sref="cadastro" class="btn btn-primary">Cadastrar</a></button>
+            <button type="submit" class="btn btn-link"><a ui-sref="view({ serviceId: null })" class="btn btn-primary">Editar/Excluir</a></button>
+            <button type="submit" class="btn btn-link"><a ui-sref="list" class="btn btn-primary">Listar todos</a></button>
+        </div>
+    </div>
+    <div ui-view></div>
+</body>

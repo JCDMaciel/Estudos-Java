@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/controllers/cadastroController.js"></script>
+    <script src="../assets/js/services/pessoasAPIservice.js"></script>
+    <script src="../assets/js/directives/uiAlertDirective.js"></script> 
+    <script src="../assets/js/directives/uiFormularioCadastroUsuarioDirective.js"></script>
+</head>
+<body ng-controller="cadastroController">
+    <h2 class="jumbotron" align="center">{{app}}</h2>
+    <div ng-if="!loading">
+            <h2 align="center" style="font-weight: 600;" >Pessoas</h2>
+            <ui-formulario-cadastro-usuario></ui-formulario-cadastro-usuario>
+            <div id="contatos">
+                <h2 align="center" style="font-weight: 600;">Contatos</h2>
+                <ui-formulario-cadastro-contato></ui-formulario-cadastro-contato>
+            </div>
+             <div align="center">
+                <button type="button" class="btn btn-primary" style="margin: 6px;" ng-click="adicionaPessoa()">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+    <div ng-if="loading" class="loader"></div>
+    <ui-alert ng-if="error" title="Ops!" message="Erro de conexão"></ui-alert>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/controllers/listController.js"></script>
+    <script src="../assets/js/services/pessoasAPIservice.js"></script>  
+    <script src="../assets/js/directives/uiAlertDirective.js"></script> 
+    <script src="../assets/js/directives/uiTabelaDePessoasDirective.js"></script> 
+
+    <script src="../assets/js/routes/config.js"></script>           
+</head>
+<body ng-controller="listController">
+    <div>
+        <h2 class="jumbotron" align="center">{{app}}</h2>
+        <table class="table" ng-if="!loading">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Email</th>
+                    <th>Endereço</th>
+                    <th>Nascimento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pessoa in pessoas">
+                    <td><a ui-sref="view({ serviceId: pessoa.id })" style="color: rgba(0, 0, 0, 0.897);">{{pessoa.id}}</a></td>
+                    <td><a ui-sref="view({ serviceId: pessoa.id })" style="color: black;">{{pessoa.nome}}</a></td>
+                    <td><a ui-sref="view({ serviceId: pessoa.id })" style="color: black;">{{pessoa.cpf}}</a></td>
+                    <td><a ui-sref="view({ serviceId: pessoa.id })" style="color: black;">{{pessoa.email}}</a></td>
+                    <td><a ui-sref="view({ serviceId: pessoa.id })" style="color: black;">{{pessoa.endereco}}</a></td>
+                    <td><a ui-sref="view({ serviceId: pessoa.id })" style="color: black;">{{pessoa.dataDeNascimento}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div ng-if="loading" class="loader"></div>
+    <ui-alert ng-if="error" title="Ops!" message="Erro de conexão"></ui-alert>
+</body>
+</html>
